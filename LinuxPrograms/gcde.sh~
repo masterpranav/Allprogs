@@ -1,0 +1,21 @@
+echo "Enter 2 no.s"
+read a
+read b
+ gcd= $a
+if [ $b -lt $a ]
+then 
+ gcd= $b
+fi
+ 
+while [! $gcd -eq 0  ]
+do 
+x= ` expr $a % $gcd `
+y= ` expr $b % $gcd `
+if [ $x -eq 0 -a $b -eq 0 ]
+then 
+	echo "The G.C.D is"
+	echo $gcd
+	break
+fi
+gcd= `expr $gcd - 1`
+done

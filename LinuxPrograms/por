@@ -1,0 +1,8 @@
+po=8
+no=2
+for ((i=1;i<=8;i++))
+do
+	ans= `expr $ans \* $no`
+	
+done
+echo $ans
